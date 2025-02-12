@@ -1,0 +1,56 @@
+@media screen and (width >= 320px) {
+	#some-id {
+		color: red;
+	}
+}
+
+@media screen and (width >= 500px) {
+	#some-id {
+		color: red;
+	}
+}
+
+.fira-sans-bold {
+	font-family: "Fira Sans", serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+
+h1 {
+	color:#4D3D5E;
+	font-size: 48px;
+	font-family: 'Fira Sans';
+	text-align: center;
+}
+
+h2 {
+	color:#4D3D5E;
+	font-size: 40px;
+	font-family: 'Fira Sans';
+	text-align: center;
+	background-color:#F9EBED;
+}
+
+h2.tips { /*trying to get the text not to go center when in a tip section, not working atm*/
+	text-align: left;
+}
+
+
+h3 {
+	color:#4D3D5E;
+	font-size: 34px;
+	font-family: 'Fira Sans';
+}
+
+p, a, li {
+	font-size: 22px;
+	font-family: "Source Sans 3";
+}
+
+.center {
+	text-align: center;
+}
+
+a {
+	color: #47847D;
+}
