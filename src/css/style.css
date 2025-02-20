@@ -10,16 +10,15 @@
 	}
 }
 
-.fira-sans-bold {
-	font-family: "Fira Sans", serif;
-	font-weight: 700;
-	font-style: normal;
-  }
+* {
+    box-sizing: border-box;
+}
 
 h1 {
 	color:#4D3D5E;
 	font-size: 48px;
 	font-family: 'Fira Sans';
+	font-weight: 600;
 	text-align: center;
 }
 
@@ -27,6 +26,7 @@ h2 {
 	color:#4D3D5E;
 	font-size: 40px;
 	font-family: 'Fira Sans';
+	font-weight: 600;
 	text-align: center;
 	background-color:#F9EBED;
 }
@@ -40,6 +40,7 @@ h3 {
 	color:#4D3D5E;
 	font-size: 34px;
 	font-family: 'Fira Sans';
+	font-weight: 500;
 }
 
 p, a, li {
@@ -53,4 +54,8 @@ p, a, li {
 
 a {
 	color: #47847D;
+}
+
+img {
+	border-radius: 30px;
 }
