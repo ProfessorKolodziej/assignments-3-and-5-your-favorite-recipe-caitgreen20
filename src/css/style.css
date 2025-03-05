@@ -1,61 +1,574 @@
-@media screen and (width >= 320px) {
-	#some-id {
-		color: red;
-	}
-}
-
-@media screen and (width >= 500px) {
-	#some-id {
-		color: red;
-	}
-}
-
 * {
     box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+  } /* source: https://stackoverflow.com/questions/24739126/scroll-to-a-specific-element-using-html */
+
+body {
+	margin: 0;
+}
+
+.padding {
+	padding: 0 5%;
+}
+
 h1 {
 	color:#4D3D5E;
-	font-size: 48px;
+	font-size: 1.75em;
 	font-family: 'Fira Sans';
 	font-weight: 600;
 	text-align: center;
+	padding-top: 5%;
+	margin: 0;
 }
 
 h2 {
 	color:#4D3D5E;
-	font-size: 40px;
+	font-size: 1.5em;
 	font-family: 'Fira Sans';
 	font-weight: 600;
 	text-align: center;
 	background-color:#F9EBED;
+	padding: 2% 0;
+	margin: 5% 0;
 }
-
-h2.tips { /*trying to get the text not to go center when in a tip section, not working atm*/
-	text-align: left;
-}
-
 
 h3 {
 	color:#4D3D5E;
-	font-size: 34px;
+	font-size: 1.25em;
 	font-family: 'Fira Sans';
 	font-weight: 500;
+	margin: 2%;
 }
 
 p, a, li {
-	font-size: 22px;
+	font-size: 14px;
 	font-family: "Source Sans 3";
 }
 
-.center {
-	text-align: center;
+p, li {
+	line-height: 1.5;
+	margin: 2.5% 0%;
 }
 
+ul, ol {
+	padding-left: 20px;
+}
+
+li::marker {
+	color: #D67482;
+  }
+
 a {
-	color: #47847D;
+	color: #3f736d;
 }
 
 img {
-	border-radius: 30px;
+	border-radius: 20px;
+	max-width: 100%;
+	align-self: center;
+	margin: 2% 0;
+}
+
+/* assets*/
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #F9EBED;
+	padding: 5% 5%;
+	gap: 8%;
+	img {
+		border-radius: 0px;
+		align-self: center;
+	}
+	a {
+		display: flex;
+		justify-items: center;
+	}
+}
+
+.button {
+	background-color: #D67482;
+	border-radius: 25px 5px;
+	box-shadow: 3px 3px 0px 0px #4D3D5E;
+	width: 60%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+	p, a {
+		color: #FFFFFF;
+		font-size: 1em;
+		font-weight: 700;
+	}
+}
+
+.tipcontainer {
+	display: flex;
+	justify-content: center;
+}
+
+.tips {
+	background-color: #F9EBED;
+	border-radius: 20px 20px 10px 10px;
+	display: flex;
+	flex-direction: column;
+	margin: 5% 0;
+	p {
+		padding: 1% 3%;
+		font-size: .8em;
+	}
+}
+
+.tipsheader {
+	text-align: left;
+	background-color: #D67482;
+	border-radius: 20px 20px 5px 5px;
+	display: flex;
+	gap: 2%;
+	align-self: stretch;
+	padding: 1% 2%;
+	img {
+		width: 18%;
+	}
+	h2 {
+		background-color: #D67482;
+		color: white;
+		margin: 0;
+		align-self: center;
+		font-size: 1.25em;
+	}
+	img {
+		margin: 1%;
+		max-width: 10%;
+	}
+}
+
+/*article sections*/
+
+.title p {
+	text-align: center;
+	color: #5A5A5A;
+	font-size: .8em;
+}
+
+.cardcontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.card {
+	background-color: #F9EBED;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	h2 {
+		color: #FFF;
+		width: 100%;
+		background-color: #D67482;
+		border-radius: 20px 20px 10px 10px;
+	}
+	div {
+		padding: 5% 3%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.recipecontainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.recipe {
+	background-color: #F9EBED;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	margin: 2% 0;
+	h2 {
+		color: #FFF;
+		width: 100%;
+		background-color: #D67482;
+		border-radius: 20px 20px 5px 5px;
+		margin: 0;
+	}
+	div {
+		padding: 0 3%;
+		display: flex;
+		flex-direction: column;
+		columns: 2;
+		align-items: center;
+	}
+	.textgrid {
+		display: grid;
+		grid-template-columns: repeat(2, 2fr);
+		text-align: center;
+		font-size: .9em;
+	}
+	p {
+		text-align: center;
+	}
+	img {
+		max-width: 90%;
+	}
+}
+
+.story, .ingredients {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.story {
+	img {
+		max-width: 60%;
+	}
+}
+
+.ingredients {
+	text-align: center;
+	img {
+		max-width: 100%;
+	}
+}
+
+.instrcontainer {
+	display: grid;
+	grid-template-columns: repeat(1, 2fr);
+}
+
+.instr {
+	background-color: #F9EBED;
+	border-radius: 20px;
+	padding: 4%;
+	margin-bottom: 5%;
+}
+
+.number {
+	font-family: "Fira Sans", sans-serif;
+	font-size: 1.25em;
+    font-weight: 600;
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #D67482;
+	box-shadow: 2px 2px 0px 0px #4D3D5E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.listitem {
+	padding: 2% 0;
+}
+
+/* media queries - default is 320px width (phone) */
+
+@media screen and (width: 320px) {
+}
+
+/* tablet (834 px) */
+@media screen and (min-width: 833px) {
+	.padding {
+		padding: 0 3%;
+	}
+
+	h1 {
+		padding: 2% 0 1% 0;
+	}
+
+	h2 {
+		margin: 2% 0;
+	}
+
+	p, a {
+		font-size: 18px;
+		line-height: 1.5;
+		margin: 0;
+		padding: 1% 0;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	li {
+		padding: .5% 0;
+	}
+
+	img {
+		border-radius: 30px;
+		max-width: 50%;
+		margin: 1% 0;
+	}
+
+	ol, ul {
+		margin: 0 2%;
+	}
+
+	.header {
+		padding: 3% 3%;
+		gap: 10%;
+		img {
+			max-width: 100%;
+		}
+		.icon {
+			width: 120px;
+			margin: 2%;
+		}
+	}
+
+	.button {
+		a {
+			margin: 2% 0;
+		}
+	}
+
+	.cardcontainer {
+		flex-direction: row;
+		align-items: stretch;
+		img {
+			max-width: 45%;
+		}
+	}
+
+	.card {
+		max-height: 100%;
+		margin: 1%;
+		p {
+			padding: 2% 5%;
+		}
+	}
+
+	.title p {
+		font-size: 1em;
+	}
+
+	.story {
+		flex-direction: row;
+		align-items: center;
+		text-align: justify;
+		img {
+			max-width: 40%;
+		}
+		div {
+			padding: 5%;
+		}
+		p {
+			padding: 2%;
+		}
+	}
+
+	.ingredients img {
+		max-width: 75%;
+	}
+
+	.tips {
+		max-width: 75%;
+		align-self: center;
+		border-radius: 30px 30px 10px 10px;
+		margin: 2% 0;
+		p {
+			font-size: .9em;
+			padding: 2%;
+		}
+	}
+
+	.tipsheader {
+		padding: 0 2%;
+		border-radius: 30px 30px 10px 10px;
+		img {
+			max-width: 5%;
+	}
+	}
+
+	.instr {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 5%;
+		margin-bottom: 2%;
+		padding: 2%;
+	}
+
+	.number {
+		font-size: 1.5em;
+		width: 60px;
+		height: 60px;
+	}
+
+	.recipe {
+		max-width: 90%;
+		flex-direction: column;
+		border-radius: 30px 30px 10px 10px;
+		img {
+			max-width: 50%;
+			padding-bottom: 1%;
+		}
+		p {
+			padding: 2.5% 2.5%;
+		}
+		h2 {
+			border-radius: 30px 30px 10px 10px;
+		}
+	}
+
+	.textgrid {
+		p {
+			padding: 1% 1%;
+		}
+	}
+
+	.listitem {
+		padding: 0;
+	}
+}
+
+/* laptop  (1280px)*/
+@media screen and (min-width: 1279px) {
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	h2 {
+		font-size: 2em;
+		padding: 1% 0;
+	}
+
+	h3 {
+		font-size: 1.75em;
+	}
+
+	p, a, li {
+		font-size: 24px;
+		line-height: 1.5;
+		margin: 0;
+		padding: 1% 0;
+	}
+
+	li {
+		padding: .5% 0;
+	}
+
+
+	.header {
+		padding: 1% 5%;
+		.icon {
+			width: 150px;
+			margin: 2%;
+		}
+	}
+
+	.button {
+		margin-top: 5%;
+	}
+
+	.button {
+		width: 50%;
+		height: 60px;
+	}
+
+	.tips {
+		max-width: 75%;
+		p {
+			font-size: 22px;
+			padding: 1% 3%;
+			margin: 2% 0;
+		}
+	}
+
+	.tipsheader {
+		font-size: 1.5em;
+		padding: 1% 1%;
+		img {
+			max-width: 8%;
+		}
+	}
+
+	.listitem {
+		padding-bottom: 2.5%;
+	}
+
+	.title {
+		p {
+			font-size: 22px;
+		}
+	}
+
+	.intro {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 10%;
+	}
+
+	.cardcontainer {
+		max-width: 100%;
+		img {
+			max-width: 50%;
+		}
+	}
+
+	.card {
+		p {
+			padding: 5%;
+		}
+	}
+
+	.story {
+		padding: 0 10%;
+		img {
+			max-width: 40%;
+		}
+		div {
+			padding: 0 8% 0 8%;
+		}
+	}
+
+	.ingredients {
+		padding: 0 10%;
+		img {
+			max-width: 75%;
+		}
+	}
+
+	.instructions {
+		padding: 0 10%;
+	}
+
+	.instr {
+		gap: 2%;
+	}
+
+	.number {
+		font-size: 2em;
+		width: 80px;
+		height: 80px;
+	}
+
+	.recipe {
+		max-width: 75%;
+	}
+
+	.list {
+		padding: 0 10%;
+	}
 }
